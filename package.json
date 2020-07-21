@@ -1,0 +1,22 @@
+{
+  "name": "muzsi",
+  "version": "1.0.0",
+  "description": "node.js discord bot to display latest messages",
+  "main": "index.js",
+  "repository": "https://github.com/MatyiFKBT/muzsi.git",
+  "author": "Matyi <mmatyi@caesar.elte.hu>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Chat</title>
+    <link rel="stylesheet" href="https://ez-css.now.sh" />
+  </head>
+  <body>
+    <div>
+      <small id="status"></small>
+      <h3 id="messages"></h3>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script>
+      const socket = io('http://localhost:3000');
+      const messagesElement = document.querySelector('#messages');
+      socket.on('new-message', (data) => {
+        eddigi = messagesElement.innerHTML;
+        messagesElement.innerHTML =
+          `${data.user.username}: ${data.content}<br><hr>` + eddigi;
+      });
+    </script>
+  </body>
+</html>
